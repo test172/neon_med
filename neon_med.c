@@ -412,6 +412,8 @@ static uint16x8x2_t bitonic_median_40(uint16_t *dst, uint16x8x2_t a, uint16x8x2_
 
 	b.val[1] = vminq_u16(a.val[0], b.val[1]);
 	b.val[2] = vmaxq_u16(b.val[1], b.val[2]);
+        //TO DO
+        //还要和a的最后一行比较下得到最小值
 	{
 	  uint16x8_t tmp;
 	  vmaxmin_half(b.val[2]);
